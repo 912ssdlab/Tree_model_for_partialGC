@@ -1,4 +1,5 @@
-# PartialGC: Proactive Block-level Page Migration for Superblock Management in Modern SSDs
+# PʀᴏCᴏᴍ: Proactive Component-block Migration
+for Superblock Garbage Collection
 ## 1. Requirements
 python 3.8
 scikit-learn 1.1.1

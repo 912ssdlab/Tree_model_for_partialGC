@@ -6,7 +6,6 @@ from sklearn.preprocessing import MinMaxScaler
 from joblib import dump
 from sklearn.model_selection import GridSearchCV
 
-warnings.filterwarnings('ignore')
 
 train_data = pd.read_csv('./train_data', index_col=0)
 train_data = train_data.sample(frac=1, random_state=42).reset_index(drop=True)
@@ -84,7 +83,7 @@ grid_search.fit(x_train_normalized, y_train)
 print("best params:", grid_search.best_params_)
 print("best score: {:.4f}".format(grid_search.best_score_))
 
-# 获取最佳模型（可选）
+# get best model params
 best_dt = grid_search.best_estimator_
 
 dump(clf, 'model/model.joblib')

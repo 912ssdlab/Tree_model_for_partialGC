@@ -22,7 +22,7 @@ Status blk_Inqueue(struct ssd_info *ssd, int channel, int chip, int die, int pla
 
     if(find_active_block(ssd,channel,chip,die,plane)!=SUCCESS)
     {
-        printf("\n\n Error in uninterrupt_gc().\n");
+        printf("\n Error in uninterrupt_gc().\n");
         return ERROR;
     }
     active_block=ssd->channel_head[channel].chip_head[chip].die_head[die].plane_head[plane].active_block;

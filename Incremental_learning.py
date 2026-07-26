@@ -15,7 +15,7 @@ def incremental_train_from_csv(
         update_csv_path,
         output_model_path,
         reference_train_csv,
-        weight_new_data=5.0,  # 新增参数：新数据的权重倍数
+        weight_new_data=5.0,
 ):
     if not os.path.exists(base_model_path):
         print("pre_train model not exist")

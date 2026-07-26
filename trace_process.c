@@ -1,5 +1,5 @@
 struct ssd_info *get_ppn(struct ssd_info *ssd,unsigned int channel,unsigned int chip,unsigned int die,unsigned int plane,struct sub_request *sub){
-    if(ssd->dram->map->map_entry[lpn].state==0)           /*this is the first logical page*/
+    if(ssd->dram->map->map_entry[lpn].state==0)           /* this is the first logical page */
     {
         if(ssd->dram->map->map_entry[lpn].pn!=0)
         {
@@ -45,7 +45,7 @@ struct ssd_info *get_ppn(struct ssd_info *ssd,unsigned int channel,unsigned int 
         }
 
         if(LRU_Insert(ssd, location->chip, location->block) == FALSE){
-            printf("ERROR in LRU Insert. chip is %d, block is %d", location->chip, location->block);
+            printf("ERROR in LRU Insert. chip is %d, block is %d \n", location->chip, location->block);
         }
 
         if((location->page)%3==0){
